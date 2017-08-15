@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
 	<bean id="user" class="by.galov.organizer.beans.User"></bean>
 	<bean id="task" class="by.galov.organizer.beans.Task"></bean>
-	<bean id="userfile" class="by.galov.organizer.beans.UserFile">
-	   <constructor-arg ref="user"/>
-	   <constructor-arg ref="task"/>
+	<bean id="userfile" class="by.galov.organizer.beans.UserFile" p:fileName="464">
+	   <constructor-arg ref="user" index="0"/>
+	   <constructor-arg ref="task" index="1"/>
 	   
-	   <property name="fileName" value="asdf"/>
+<!-- 	   <property name="fileName" value="asdf"/> -->
 	</bean>
 </beans>
