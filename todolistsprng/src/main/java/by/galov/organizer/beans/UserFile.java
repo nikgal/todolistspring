@@ -38,5 +38,11 @@ public class UserFile {
     public String toString(){
         return this.fileName + ";" + this.getTask() + ";" + this.getUser();
     }
+    public void initObject(){
+        System.out.println("init");
+    }
+    public void destroyObject(){
+        System.out.println("destroy");
+    }
 
 }

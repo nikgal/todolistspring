@@ -4,7 +4,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import by.galov.organizer.beans.User;
 import by.galov.organizer.beans.UserFile;
 
 @SpringBootApplication
@@ -15,7 +14,12 @@ public class Demo1Application {
 	    Object obj = context.getBean("userfile");
 	    if(obj instanceof UserFile){
 	        UserFile uf = (UserFile)obj;
-	        System.out.println(uf);
+	        System.out.println(uf.hashCode());
 	    }
+	    Object obj1 = context.getBean("userfile");
+        if(obj instanceof UserFile){
+            UserFile uf = (UserFile)obj1;
+            System.out.println(uf.hashCode());
+        }
 	}
 }
