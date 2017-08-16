@@ -8,12 +8,13 @@
 
 	<bean id="user" class="by.galov.organizer.beans.User"></bean>
 	<bean id="task" class="by.galov.organizer.beans.Task"></bean>
+	<bean id="actionRep" class="by.galov.organizer.dao.StringReplacer"/>
 	<bean id="userfile" class="by.galov.organizer.beans.UserFile"
 	 p:fileName="464" 
 	 scope="prototype">
 	   <constructor-arg ref="user" index="0"/>
 	   <constructor-arg ref="task" index="1"/>
-	   
+	   <replaced-method name="toString" replacer="actionRep"></replaced-method>
 <!-- 	   <property name="fileName" value="asdf"/> -->
 	</bean>
 	<bean class="by.galov.organizer.beans.MyBeanPostProcessor"/>

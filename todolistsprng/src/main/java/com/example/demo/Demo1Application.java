@@ -14,12 +14,12 @@ public class Demo1Application {
 	    Object obj = context.getBean("userfile");
 	    if(obj instanceof UserFile){
 	        UserFile uf = (UserFile)obj;
-	        System.out.println(uf.hashCode());
+	        System.out.println(uf);
 	    }
 	    Object obj1 = context.getBean("userfile");
         if(obj instanceof UserFile){
             UserFile uf = (UserFile)obj1;
-            System.out.println(uf.hashCode());
+            System.out.println(uf);
         }
 	}
 }
