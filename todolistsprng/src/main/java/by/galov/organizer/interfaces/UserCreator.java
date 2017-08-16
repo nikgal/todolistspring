@@ -1,4 +1,4 @@
-package by.galov.organizer.dao;
+package by.galov.organizer.interfaces;
 
 import by.galov.organizer.beans.User;
 

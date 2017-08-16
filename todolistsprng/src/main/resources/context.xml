@@ -5,7 +5,7 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
     >
 
-
+<import resource="admin_context.xml"/>
 	<bean id="user" class="by.galov.organizer.beans.User"></bean>
 	<bean id="task" class="by.galov.organizer.beans.Task"></bean>
 	<bean id="actionRep" class="by.galov.organizer.dao.StringReplacer"/>
