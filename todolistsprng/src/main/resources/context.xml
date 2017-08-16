@@ -14,9 +14,20 @@
 	 scope="prototype">
 	   <constructor-arg ref="user" index="0"/>
 	   <constructor-arg ref="task" index="1"/>
-	   <replaced-method name="toString" replacer="actionRep"></replaced-method>
+<!-- 	   <replaced-method name="toString" replacer="actionRep"></replaced-method> -->
 <!-- 	   <property name="fileName" value="asdf"/> -->
 	</bean>
 	<bean class="by.galov.organizer.beans.MyBeanPostProcessor"/>
+	
+	<bean id="userPool" class="by.galov.organizer.impls.UserPool">
+	   <property name="userCollection">
+	       <list>
+	           <ref bean="user"/>
+	           <bean class="by.galov.organizer.beans.User" scope="prototype">
+	              <property name="uname" value="Igor"/>
+	           </bean>
+	       </list>
+	   </property>
+	</bean>
 </beans>
  
